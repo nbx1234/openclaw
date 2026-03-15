@@ -13,6 +13,12 @@ public class MemorySummary {
     private Long id;
     private String title;
     private String content;
+    private String memoryType;
+    private String priorityLevel;
+    private String retentionLevel;
+    private String sourceType;
+    private String tags;
+    private Boolean pinned;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
 }

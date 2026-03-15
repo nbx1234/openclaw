@@ -1,9 +1,14 @@
 package com.openclaw.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.openclaw.dto.MemoryOptionItem;
+import com.openclaw.dto.PersistentMemoryDisplayConfig;
+import com.openclaw.dto.PersistentMemoryFieldItem;
+import com.openclaw.dto.PersistentMemoryPayload;
 import com.openclaw.entity.MemorySummary;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MemorySummaryService {
     /**
@@ -35,4 +40,10 @@ public interface MemorySummaryService {
      * 获取所有记忆总结
      */
     List<MemorySummary> getAll();
+
+    PersistentMemoryPayload getPersistentMemoryPayload();
+
+    PersistentMemoryDisplayConfig getPersistentMemoryFieldOptions();
+
+    PersistentMemoryDisplayConfig updatePersistentMemoryFieldOptions(String title, List<PersistentMemoryFieldItem> fields);
 }

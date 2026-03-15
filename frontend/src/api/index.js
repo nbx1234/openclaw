@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = 'http://localhost:8080/api'
+const API_BASE_URL = '/api'
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -22,6 +22,14 @@ api.interceptors.response.use(
 // 获取记忆总结列表
 export const getMemorySummaries = (params = {}) => {
   return api.get('/memory-summary', { params })
+}
+
+export const getPersistentMemoryPayload = () => {
+  return api.get('/memory-summary/persistent')
+}
+
+export const getPersistentMemoryFields = () => {
+  return api.get('/memory-summary/persistent-fields')
 }
 
 // 获取单个记忆总结

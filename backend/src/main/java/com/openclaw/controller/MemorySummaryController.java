@@ -1,6 +1,10 @@
 package com.openclaw.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.openclaw.dto.MemoryOptionItem;
+import com.openclaw.dto.PersistentMemoryDisplayConfig;
+import com.openclaw.dto.PersistentMemoryFieldConfigRequest;
+import com.openclaw.dto.PersistentMemoryPayload;
 import com.openclaw.entity.MemorySummary;
 import com.openclaw.service.MemorySummaryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +25,7 @@ public class MemorySummaryController {
     /**
      * 保存记忆总结
      */
-    @PostMapping("/save")
+    @PostMapping({"", "/save"})
     public Map<String, Object> save(@RequestBody MemorySummary memorySummary) {
         MemorySummary result = memorySummaryService.save(memorySummary);
         return buildResponse(200, "保存成功", result);
@@ -62,6 +66,33 @@ public class MemorySummaryController {
     public Map<String, Object> getAll() {
         List<MemorySummary> result = memorySummaryService.getAll();
         return buildResponse(200, "查询成功", result);
+    }
+
+    /**
+     * 获取持久化记忆面板数据
+     */
+    @GetMapping("/persistent")
+    public Map<String, Object> getPersistentMemoryPayload() {
+        PersistentMemoryPayload result = memorySummaryService.getPersistentMemoryPayload();
+        return buildResponse(200, "查询成功", result);
+    }
+
+    /**
+     * 获取持久化记忆字段配置
+     */
+    @GetMapping("/persistent-fields")
+    public Map<String, Object> getPersistentMemoryFields() {
+        PersistentMemoryDisplayConfig result = memorySummaryService.getPersistentMemoryFieldOptions();
+        return buildResponse(200, "查询成功", result);
+    }
+
+    /**
+     * 更新持久化记忆字段配置
+     */
+    @PutMapping("/persistent-fields")
+    public Map<String, Object> updatePersistentMemoryFields(@RequestBody PersistentMemoryFieldConfigRequest request) {
+        PersistentMemoryDisplayConfig result = memorySummaryService.updatePersistentMemoryFieldOptions(request.getTitle(), request.getFields());
+        return buildResponse(200, "更新成功", result);
     }
 
     /**

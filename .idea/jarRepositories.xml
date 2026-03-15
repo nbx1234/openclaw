@@ -7,6 +7,11 @@
       <option name="url" value="http://192.168.10.126:9081/repository/erayt_dev_group/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="erayt-dev" />
       <option name="name" value="erayt-dev" />
       <option name="url" value="http://192.168.10.126:9081/repository/erayt_dev_group/" />
