@@ -223,7 +223,7 @@ public class MemorySummaryServiceImpl implements MemorySummaryService {
                 Arrays.asList(
                         new PersistentMemoryFieldItem("family_members", "家庭成员", "爸爸、妈妈、孩子"),
                         new PersistentMemoryFieldItem("member_preferences", "各成员喜好", "爸爸喜欢拿香烟，妈妈喜欢吃零食，孩子喜欢积木"),
-                        new PersistentMemoryFieldItem("member_dislikes", "各成员忌讳", "爸爸不喜欢，妈妈不喜欢带毛的玩具，孩子不喜欢遥控"),
+                        new PersistentMemoryFieldItem("member_dislikes", "各成员忌讳", "爸爸不喜欢苹果，妈妈不喜欢带毛的玩具，孩子不喜欢遥控"),
                         new PersistentMemoryFieldItem("learned_skills", "已经学会的技能", "语音识别、视觉识别、路径规划、")
                 )
         );
