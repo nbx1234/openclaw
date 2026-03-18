@@ -221,15 +221,10 @@ public class MemorySummaryServiceImpl implements MemorySummaryService {
         return new PersistentMemoryDisplayConfig(
                 "家庭陪伴记忆字段",
                 Arrays.asList(
-                        new PersistentMemoryFieldItem("family_members", "家庭成员", "爷爷、奶奶、爸爸、妈妈、孩子"),
-                        new PersistentMemoryFieldItem("member_preferences", "各成员喜好", "爸爸喜欢晨跑，妈妈喜欢轻音乐，孩子喜欢恐龙绘本和积木"),
-                        new PersistentMemoryFieldItem("member_dislikes", "各成员忌讳", "孩子害怕突然的大音量，奶奶晚间不喜欢强光"),
-                        new PersistentMemoryFieldItem("daily_routine", "家庭作息", "7:00起床，12:00午餐，20:30准备睡前陪伴"),
-                        new PersistentMemoryFieldItem("care_needs", "照护需求", "晚饭后提醒喝水，情绪低落时优先播放舒缓音乐"),
-                        new PersistentMemoryFieldItem("important_dates", "重要日期", "孩子生日6月12日，奶奶复诊每月18日"),
-                        new PersistentMemoryFieldItem("learned_skills", "已经学会的技能", "讲绘本、播放儿歌、提醒喝水、语音问候、播报天气"),
-                        new PersistentMemoryFieldItem("environment_rules", "家庭环境规则", "卧室夜间降低音量，厨房区域不主动进入"),
-                        new PersistentMemoryFieldItem("emergency_contacts", "紧急联系人", "爸爸 13800000001，妈妈 13900000002")
+                        new PersistentMemoryFieldItem("family_members", "家庭成员", "爸爸、妈妈、孩子"),
+                        new PersistentMemoryFieldItem("member_preferences", "各成员喜好", "爸爸喜欢拿香烟，妈妈喜欢吃零食，孩子喜欢积木"),
+                        new PersistentMemoryFieldItem("member_dislikes", "各成员忌讳", "爸爸不喜欢，妈妈不喜欢带毛的玩具，孩子不喜欢遥控"),
+                        new PersistentMemoryFieldItem("learned_skills", "已经学会的技能", "语音识别、视觉识别、路径规划、")
                 )
         );
     }
